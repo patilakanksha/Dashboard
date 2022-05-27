@@ -1,0 +1,46 @@
+:root {
+    --offcanvas-width: 270px;
+    --topNavbarHeight: 56px;
+  }
+  .sidebar-nav {
+    width: var(--offcanvas-width);
+   
+  }
+
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    
+  }
+  
+  .sidebar a {
+    font-size:large;
+    font-weight: 500;
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+   
+
+  @media (min-width:992px) {
+    body{
+        overflow: auto !important;
+    }
+    main {
+        margin-left: var(--offcanvas-width);
+      }
+    .offcanvas-backdrop::before {
+        display: none;
+      }
+      .sidebar-nav{
+          transform: none;
+          visibility:visible !important;
+          top: var(--topNavbarHeight);
+          height: calc(100% - var(--topNavbarHeight));
+      }
+  }
+  
